@@ -47,5 +47,13 @@ router.post("/login", (request, response) => {
     })
 });
 
+router.get("/logout", (request, response) => {
+    request.session.loggedIn = false;
+    response.send("User has logged out!");
+});
+
+router.get("/expire-session", (request, response) => {
+    request.session.destroy(() => response.send("OK"));
+});
 
 module.exports = router;

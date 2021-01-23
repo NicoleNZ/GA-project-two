@@ -1,0 +1,25 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicoleNZ/GA-project-two.git"
+  },
+  "author": "Nicole Barnett",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicoleNZ/GA-project-two/issues"
+  },
+  "homepage": "https://github.com/NicoleNZ/GA-project-two#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^1.0.6",
+    "regenerator-runtime": "^0.13.7"
+  }
+}
