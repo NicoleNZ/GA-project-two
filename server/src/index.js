@@ -18,6 +18,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use("/internal", internalRouter);
+app.use("/vault", vaultRouter);
 
 
 app.listen(port, () => {
