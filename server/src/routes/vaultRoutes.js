@@ -38,4 +38,16 @@ router.patch("/update-product/:id", (request, response) => {
     });
 });
 
+router.delete("/delete-product/:id", (request, response) => {
+    console.log("You're deleting id: " + request.params.id);
+    VaultApi.findByIdAndDelete(request.params.id)
+        .then((data) => {
+            response.send(request.params.id + " has successfully been deleted!");
+            console.log(request.params.id + " has successfully been deleted!");
+        })
+    .catch(() => {
+        response.status(404).send("Sorry - there doesn't appear to be a product by that id.  Want to try again?");
+    });
+});
+
 module.exports = router;
