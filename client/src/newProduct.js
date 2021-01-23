@@ -3,8 +3,12 @@ const form = `
     <div class="row">
         <div class="col" id="side-col"></div>
         <div class="col-10" id="master-data-form">
-            <h4>Create a New Product</h4>
+            <h4>Create and Manage Your Products</h4>
             <form id="product-form">
+                <div class="form-group">
+                    <label for="product-id-label" id="product-id-label">Product ID</label>
+                    <input type="text" class="form-control" id="product-id" placeholder="Enter Product ID" name="product-id">
+                </div>
                 <div class="form-group">
                     <label for="product-code" id="product-code-label">Product Code</label>
                     <input type="text" class="form-control" id="product-code" placeholder="E.g. FPC123" name="product-code">
@@ -44,7 +48,9 @@ const form = `
                         <label class="form-check-label" for="active-product-no" id="active-product-no-label">No</label>
                     </div>
                 </fieldset>
-                <button type="submit" class="btn btn-light">Create Product</button>
+                <button type="button" id="create-product" class="btn btn-light">Create Product</button>
+                <button type="button" id="update-product" class="btn btn-light">Update Product</button>
+                <button type="button" id="delete-product" class="btn btn-danger">Delete Product</button>
             </form>
         </div>
         <div class="col" id="side-col"></div>
@@ -52,7 +58,7 @@ const form = `
 `;
 
 const newProduct = () => {
-    $(document).on("submit", "#product-form", async (e) => {
+    $(document).on("click", "#create-product", async (e) => {
         e.preventDefault();
         console.log($("#product-code").val());
         console.log($("#product-description").val());
@@ -80,13 +86,47 @@ const newProduct = () => {
             contentType: "application/json",
             data: JSON.stringify(requestBody),
         });
+        console.log(response);
+    });
 
-        console.log("response: ", response);
+    $(document).on("click", "#update-product", async (e) => {
+        e.preventDefault();
+        console.log($("#product-id").val());
 
-        console.log(`This is the response I get back!: ${response}`);
+        const requestBody = {
+            productCode: $("#product-code").val(),
+            productName: $("#product-description").val(),
+            netWeight: $("#net-weight").val(),
+            unitsPerCase: $("#units-case").val(),
+            listPrice: $("#list-price").val(),
+            unitBarcode: $("#unit-barcode").val(),
+            caseBarcode: $("#case-barcode").val(),
+            activeProduct: $(`input[name="active-product"]:checked`).val()
+        };
+
+        const response = await $.ajax({
+            type: "PATCH",
+            url: `/api/vault/update-product/${$("#product-id").val()}`,
+            contentType: "application/json",
+            data: JSON.stringify(requestBody),
+        });
+        console.log(response);
+    });
+
+    $(document).on("click", "#delete-product", async (e) => {
+        e.preventDefault();
+        console.log($("#product-id").val());
+
+        const response = await $.ajax({
+            type: "DELETE",
+            url: `/api/vault/delete-product/${$("#product-id").val()}`,
+            contentType: "application/json",
+        });
+        console.log(response);
     });
 
     return form;
 };
+
 
 export default newProduct;

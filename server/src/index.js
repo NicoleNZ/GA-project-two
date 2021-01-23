@@ -3,6 +3,10 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const session = require("express-session");
 
+const internalRouter = require("./routes/internalRoutes");
+const userRouter = require("./routes/userRoutes");
+const vaultRouter = require("./routes/vaultRoutes");
+
 mongoose.connect("mongodb://localhost:27017/masterDataVault", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -10,10 +14,6 @@ mongoose.connect("mongodb://localhost:27017/masterDataVault", {
 
 const app = express();
 const port = 4000;
-
-const internalRouter = require("./routes/internalRoutes");
-const userRouter = require("./routes/userRoutes");
-const vaultRouter = require("./routes/vaultRoutes");
 
 app.use(express.json());
 app.use(cors());

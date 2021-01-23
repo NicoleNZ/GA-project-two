@@ -33,11 +33,11 @@ h4  {
     width: 80%;
 }
 
-#product-code, #product-description, #net-weight, #units-case, #list-price, #unit-barcode, #case-barcode  {
+#product-id, #product-code, #product-description, #net-weight, #units-case, #list-price, #unit-barcode, #case-barcode  {
     display: inline;
 }
 
-#product-code-label, #product-description-label, #net-weight-label, #units-case-label, 
+#product-id-label, #product-code-label, #product-description-label, #net-weight-label, #units-case-label, 
 #list-price-label, #unit-barcode-label, #case-barcode-label, #active-product-label,
 #active-product-yes-label, #active-product-no-label  {
     color: white;
