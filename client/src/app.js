@@ -1,5 +1,5 @@
-import "regenerator-runtime/runtime";
-import newProduct from "./newProduct";
+//import "regenerator-runtime/runtime";
+import newProduct from "./newProduct.js";
 console.log("Check if this works");
 
-$("body").append(newProduct());
+$("#append-product-form").append(newProduct());
