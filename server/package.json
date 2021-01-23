@@ -1,14 +1,22 @@
 {
-  "name": "server",
+  "name": "ga-project-two",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index.js"
+    "start": "nodemon src/index.js"
   },
-  "author": "Nicole B",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicoleNZ/GA-project-two.git"
+  },
+  "author": "Nicole Barnett",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicoleNZ/GA-project-two/issues"
+  },
+  "homepage": "https://github.com/NicoleNZ/GA-project-two#readme",
   "dependencies": {
     "bcrypt": "^5.0.0",
     "cors": "^2.8.5",
