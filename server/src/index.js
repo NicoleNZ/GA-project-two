@@ -26,8 +26,8 @@ app.use(
 );
 
 app.use("/internal", internalRouter);
-app.use("/vault", vaultRouter);
-app.use("/user", userRouter);
+app.use("/api/vault", vaultRouter);
+app.use("/api/user", userRouter);
 
 app.listen(port, () => {
     console.log(`App is listening at http://localhost:${port}`);
