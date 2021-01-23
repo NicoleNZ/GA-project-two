@@ -25,4 +25,17 @@ router.post("/new-product", (request, response) => {
     response.send("You've successfully created a new product!")
 });
 
+router.patch("/update-product/:id", (request, response) => {
+    console.log("You're updating id: " + request.params.id);
+    VaultApi.findByIdAndUpdate(request.params.id, request.body, { new: true })
+        .then((data) => {
+            response.json(data);
+            console.log(data);
+            console.log(request.params.id + " has successfully been updated!");
+        })
+    .catch(() => {
+        response.status(404).send("Sorry - there doesn't appear to be a product by that id.  Want to try again?");
+    });
+});
+
 module.exports = router;
