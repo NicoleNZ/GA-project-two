@@ -1,13 +1,13 @@
 const mongoose = require("mongoose");
 
 const vaultSchema = mongoose.Schema({
-    productCode: Number,
+    productCode: String,
     productName: String,
-    netWeight: Number,
-    unitsPerShipper: Number,
+    netWeight: String,
+    unitsPerCase: Number,
     listPrice: String,
     unitBarcode: Number,
-    shipperBarcode: Number,
+    caseBarcode: Number,
     activeProduct: Boolean,
 });
 
