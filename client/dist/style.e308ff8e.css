@@ -1,0 +1,58 @@
+#background-image   {
+    background-image: url(https://images.unsplash.com/photo-1582139329536-e7284fece509?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80);
+        height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    text-align: center;
+}
+
+h1  {
+    font-family: 'Lobster', cursive;
+    padding-top: 50px;
+    color: white;
+    font-size: 130px;
+}
+
+h4  {
+    font-family: 'Open Sans', sans-serif;
+    padding-bottom: 50px;
+    color: white;
+    font-size: 30px;
+}
+
+.form-control   {
+    float: right;
+    width: 80%;
+}
+
+#product-code, #product-description, #net-weight, #units-case, #list-price, #unit-barcode, #case-barcode  {
+    display: inline;
+}
+
+#product-code-label, #product-description-label, #net-weight-label, #units-case-label, 
+#list-price-label, #unit-barcode-label, #case-barcode-label, #active-product-label,
+#active-product-yes-label, #active-product-no-label  {
+    color: white;
+}
+
+#master-data-form   {
+    background-color: grey;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    padding-right: 5%;
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+    border-radius: 5px;
+}
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */
