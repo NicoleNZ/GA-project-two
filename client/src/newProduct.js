@@ -49,6 +49,7 @@ const form = `
                     </div>
                 </fieldset>
                 <button type="button" id="create-product" class="btn btn-light">Create Product</button>
+                <button type="button" id="find-product" class="btn btn-light">Find Product</button>
                 <button type="button" id="update-product" class="btn btn-light">Update Product</button>
                 <button type="button" id="delete-product" class="btn btn-danger">Delete Product</button>
             </form>
@@ -89,6 +90,31 @@ const newProduct = () => {
         console.log(response);
     });
 
+    $(document).on("click", "#find-product", async (e) => {
+        e.preventDefault();
+        const searchProductCode = $("#product-code").val();
+        if(searchProductCode)   {
+            const response = await $.ajax({
+                type: "POST",
+                url: `/api/vault/findbyid/${$("#product-id").val()}`,
+                contentType: "application/json",
+                data: { productCode: searchProductCode },
+                success: function(data) {
+                    $("#product-description").val(data["productName"]);
+                    $("#net-weight").val(data["netWeight"]);
+                    $("#units-case").val(data["unitsPerCase"]);
+                    $("#list-price").val(data["listPrice"]);
+                    $("#unit-barcode").val(data["unitBarcode"]);
+                    $("#case-barcode").val(data["caseBarcode"]);
+                    $(`input[name="active-product"]:checked`).val(data["activeProduct"])
+                }
+            });
+            console.log(response);
+        } else {
+            alert("No such ID found!");
+        }
+        });
+
     $(document).on("click", "#update-product", async (e) => {
         e.preventDefault();
         console.log($("#product-id").val());
@@ -126,7 +152,6 @@ const newProduct = () => {
     });
 
     return form;
-    $("append-product-form").empty();
 };
 
 

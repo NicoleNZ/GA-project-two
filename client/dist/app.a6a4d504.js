@@ -880,7 +880,7 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-var form = "\n    <div class=\"row\">\n        <div class=\"col\" id=\"side-col\"></div>\n        <div class=\"col-10\" id=\"master-data-form\">\n            <h4>Create and Manage Your Products</h4>\n            <form id=\"product-form\">\n                <div class=\"form-group\">\n                    <label for=\"product-id-label\" id=\"product-id-label\">Product ID</label>\n                    <input type=\"text\" class=\"form-control\" id=\"product-id\" placeholder=\"Enter Product ID\" name=\"product-id\">\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"product-code\" id=\"product-code-label\">Product Code</label>\n                    <input type=\"text\" class=\"form-control\" id=\"product-code\" placeholder=\"E.g. FPC123\" name=\"product-code\">\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"product-description\" id=\"product-description-label\">Product Description</label>\n                    <input type=\"text\" class=\"form-control\" id=\"product-description\" placeholder=\"E.g. Acme Vanilla Bean Flavoured Almonds\" name=\"product-description\">\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"net-weight\" id=\"net-weight-label\">Net Weight</label>\n                    <input type=\"text\" class=\"form-control\" id=\"net-weight\" placeholder=\"E.g. 400g\" name=\"net-weight\">\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"units-case\" id=\"units-case-label\">Units per Case</label>\n                    <input type=\"text\" class=\"form-control\" id=\"units-case\" placeholder=\"E.g. 20\" name=\"units-case\">\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"list-price\" id=\"list-price-label\">List Price</label>\n                    <input type=\"text\" class=\"form-control\" id=\"list-price\" placeholder=\"E.g. $30.00\" name=\"list-price\">\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"unit-barcode\" id=\"unit-barcode-label\">Unit Barcode</label>\n                    <input type=\"text\" class=\"form-control\" id=\"unit-barcode\" placeholder=\"E.g. 942112345678\" name=\"unit-barcode\">\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"case-barcode\" id=\"case-barcode-label\">Case Barcode</label>\n                    <input type=\"text\" class=\"form-control\" id=\"case-barcode\" placeholder=\"E.g. 194212345678\" name=\"case-barcode\">\n                </div>\n                <fieldset class=\"form-group\">\n                    <legend class=\"col-form-label\" id=\"active-product-label\">Active Product?</legend>\n                    <div class=\"form-check form-check-inline\">\n                        <input class=\"form-check-input\" type=\"radio\" id=\"active-product-yes\" name =\"active-product\" value=\"true\">\n                        <label class=\"form-check-label\" for=\"active-product-yes\" id=\"active-product-yes-label\">Yes</label>\n                    </div>\n                    <div class=\"form-check form-check-inline\">\n                        <input class=\"form-check-input\" type=\"radio\" id=\"active-product-no\" name =\"active-product\" value=\"false\">\n                        <label class=\"form-check-label\" for=\"active-product-no\" id=\"active-product-no-label\">No</label>\n                    </div>\n                </fieldset>\n                <button type=\"button\" id=\"create-product\" class=\"btn btn-light\">Create Product</button>\n                <button type=\"button\" id=\"update-product\" class=\"btn btn-light\">Update Product</button>\n                <button type=\"button\" id=\"delete-product\" class=\"btn btn-danger\">Delete Product</button>\n            </form>\n        </div>\n        <div class=\"col\" id=\"side-col\"></div>\n    </div>\n";
+var form = "\n    <div class=\"row\">\n        <div class=\"col\" id=\"side-col\"></div>\n        <div class=\"col-10\" id=\"master-data-form\">\n            <h4>Create and Manage Your Products</h4>\n            <form id=\"product-form\">\n                <div class=\"form-group\">\n                    <label for=\"product-id-label\" id=\"product-id-label\">Product ID</label>\n                    <input type=\"text\" class=\"form-control\" id=\"product-id\" placeholder=\"Enter Product ID\" name=\"product-id\">\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"product-code\" id=\"product-code-label\">Product Code</label>\n                    <input type=\"text\" class=\"form-control\" id=\"product-code\" placeholder=\"E.g. FPC123\" name=\"product-code\">\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"product-description\" id=\"product-description-label\">Product Description</label>\n                    <input type=\"text\" class=\"form-control\" id=\"product-description\" placeholder=\"E.g. Acme Vanilla Bean Flavoured Almonds\" name=\"product-description\">\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"net-weight\" id=\"net-weight-label\">Net Weight</label>\n                    <input type=\"text\" class=\"form-control\" id=\"net-weight\" placeholder=\"E.g. 400g\" name=\"net-weight\">\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"units-case\" id=\"units-case-label\">Units per Case</label>\n                    <input type=\"text\" class=\"form-control\" id=\"units-case\" placeholder=\"E.g. 20\" name=\"units-case\">\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"list-price\" id=\"list-price-label\">List Price</label>\n                    <input type=\"text\" class=\"form-control\" id=\"list-price\" placeholder=\"E.g. $30.00\" name=\"list-price\">\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"unit-barcode\" id=\"unit-barcode-label\">Unit Barcode</label>\n                    <input type=\"text\" class=\"form-control\" id=\"unit-barcode\" placeholder=\"E.g. 942112345678\" name=\"unit-barcode\">\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"case-barcode\" id=\"case-barcode-label\">Case Barcode</label>\n                    <input type=\"text\" class=\"form-control\" id=\"case-barcode\" placeholder=\"E.g. 194212345678\" name=\"case-barcode\">\n                </div>\n                <fieldset class=\"form-group\">\n                    <legend class=\"col-form-label\" id=\"active-product-label\">Active Product?</legend>\n                    <div class=\"form-check form-check-inline\">\n                        <input class=\"form-check-input\" type=\"radio\" id=\"active-product-yes\" name =\"active-product\" value=\"true\">\n                        <label class=\"form-check-label\" for=\"active-product-yes\" id=\"active-product-yes-label\">Yes</label>\n                    </div>\n                    <div class=\"form-check form-check-inline\">\n                        <input class=\"form-check-input\" type=\"radio\" id=\"active-product-no\" name =\"active-product\" value=\"false\">\n                        <label class=\"form-check-label\" for=\"active-product-no\" id=\"active-product-no-label\">No</label>\n                    </div>\n                </fieldset>\n                <button type=\"button\" id=\"create-product\" class=\"btn btn-light\">Create Product</button>\n                <button type=\"button\" id=\"find-product\" class=\"btn btn-light\">Find Product</button>\n                <button type=\"button\" id=\"update-product\" class=\"btn btn-light\">Update Product</button>\n                <button type=\"button\" id=\"delete-product\" class=\"btn btn-danger\">Delete Product</button>\n            </form>\n        </div>\n        <div class=\"col\" id=\"side-col\"></div>\n    </div>\n";
 
 var newProduct = function newProduct() {
   $(document).on("click", "#create-product", /*#__PURE__*/function () {
@@ -933,12 +933,67 @@ var newProduct = function newProduct() {
       return _ref.apply(this, arguments);
     };
   }());
-  $(document).on("click", "#update-product", /*#__PURE__*/function () {
+  $(document).on("click", "#find-product", /*#__PURE__*/function () {
     var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(e) {
-      var requestBody, response;
+      var searchProductCode, response;
       return regeneratorRuntime.wrap(function _callee2$(_context2) {
         while (1) {
           switch (_context2.prev = _context2.next) {
+            case 0:
+              e.preventDefault();
+              searchProductCode = $("#product-code").val();
+
+              if (!searchProductCode) {
+                _context2.next = 9;
+                break;
+              }
+
+              _context2.next = 5;
+              return $.ajax({
+                type: "POST",
+                url: "/api/vault/findbyid/".concat($("#product-id").val()),
+                contentType: "application/json",
+                data: {
+                  productCode: searchProductCode
+                },
+                success: function success(data) {
+                  $("#product-description").val(data["productName"]);
+                  $("#net-weight").val(data["netWeight"]);
+                  $("#units-case").val(data["unitsPerCase"]);
+                  $("#list-price").val(data["listPrice"]);
+                  $("#unit-barcode").val(data["unitBarcode"]);
+                  $("#case-barcode").val(data["caseBarcode"]);
+                  $("input[name=\"active-product\"]:checked").val(data["activeProduct"]);
+                }
+              });
+
+            case 5:
+              response = _context2.sent;
+              console.log(response);
+              _context2.next = 10;
+              break;
+
+            case 9:
+              alert("No such ID found!");
+
+            case 10:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2);
+    }));
+
+    return function (_x2) {
+      return _ref2.apply(this, arguments);
+    };
+  }());
+  $(document).on("click", "#update-product", /*#__PURE__*/function () {
+    var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(e) {
+      var requestBody, response;
+      return regeneratorRuntime.wrap(function _callee3$(_context3) {
+        while (1) {
+          switch (_context3.prev = _context3.next) {
             case 0:
               e.preventDefault();
               console.log($("#product-id").val());
@@ -952,7 +1007,7 @@ var newProduct = function newProduct() {
                 caseBarcode: $("#case-barcode").val(),
                 activeProduct: $("input[name=\"active-product\"]:checked").val()
               };
-              _context2.next = 5;
+              _context3.next = 5;
               return $.ajax({
                 type: "PATCH",
                 url: "/api/vault/update-product/".concat($("#product-id").val()),
@@ -961,42 +1016,10 @@ var newProduct = function newProduct() {
               });
 
             case 5:
-              response = _context2.sent;
-              console.log(response);
-
-            case 7:
-            case "end":
-              return _context2.stop();
-          }
-        }
-      }, _callee2);
-    }));
-
-    return function (_x2) {
-      return _ref2.apply(this, arguments);
-    };
-  }());
-  $(document).on("click", "#delete-product", /*#__PURE__*/function () {
-    var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(e) {
-      var response;
-      return regeneratorRuntime.wrap(function _callee3$(_context3) {
-        while (1) {
-          switch (_context3.prev = _context3.next) {
-            case 0:
-              e.preventDefault();
-              console.log($("#product-id").val());
-              _context3.next = 4;
-              return $.ajax({
-                type: "DELETE",
-                url: "/api/vault/delete-product/".concat($("#product-id").val()),
-                contentType: "application/json"
-              });
-
-            case 4:
               response = _context3.sent;
               console.log(response);
 
-            case 6:
+            case 7:
             case "end":
               return _context3.stop();
           }
@@ -1008,11 +1031,156 @@ var newProduct = function newProduct() {
       return _ref3.apply(this, arguments);
     };
   }());
+  $(document).on("click", "#delete-product", /*#__PURE__*/function () {
+    var _ref4 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4(e) {
+      var response;
+      return regeneratorRuntime.wrap(function _callee4$(_context4) {
+        while (1) {
+          switch (_context4.prev = _context4.next) {
+            case 0:
+              e.preventDefault();
+              console.log($("#product-id").val());
+              _context4.next = 4;
+              return $.ajax({
+                type: "DELETE",
+                url: "/api/vault/delete-product/".concat($("#product-id").val()),
+                contentType: "application/json"
+              });
+
+            case 4:
+              response = _context4.sent;
+              console.log(response);
+
+            case 6:
+            case "end":
+              return _context4.stop();
+          }
+        }
+      }, _callee4);
+    }));
+
+    return function (_x4) {
+      return _ref4.apply(this, arguments);
+    };
+  }());
   return form;
-  $("append-product-form").empty();
 };
 
 var _default = newProduct;
+exports.default = _default;
+},{}],"src/user/loginUser.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+var form = "\n    <form id=\"login-user\">\n        <div class=\"form-group\">\n            <label for=\"username\">Username</label>\n            <input type=\"text\" id=\"username\" class=\"form-control\" placeholder=\"Enter your username\" name=\"username\">\n        </div>\n        <div class=\"form-group\">\n            <label for=\"password\">Password</label>\n            <input type=\"text\" id=\"password\" class=\"form-control\" placeholder=\"Enter your password\" name=\"password\">\n        </div>\n        <button type=\"submit\" class=\"btn btn-primary\" id=\"submit-login\">Submit</button>\n    </form> \n";
+
+var loginUser = function loginUser() {
+  $(document).on("submit", "#login-user", /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(e) {
+      var formData, response;
+      return regeneratorRuntime.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              e.preventDefault();
+              formData = {
+                username: $("input[name='username']").val(),
+                password: $("input[name='password']").val()
+              };
+              _context.next = 4;
+              return $.ajax({
+                type: "POST",
+                url: "/api/user/login",
+                contentType: "application/json",
+                data: JSON.stringify(formData)
+              });
+
+            case 4:
+              response = _context.sent;
+              console.log("response: ", response);
+
+            case 6:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+
+    return function (_x) {
+      return _ref.apply(this, arguments);
+    };
+  }());
+  return form;
+};
+
+var _default = loginUser;
+exports.default = _default;
+},{}],"src/user/newUser.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+var form = "\n    <form id=\"new-user\">\n        <div class=\"form-group\">\n            <label for=\"username\">Username</label>\n            <input type=\"text\" class=\"form-control\" placeholder=\"Please enter username\" name=\"username\">\n        </div>\n        <div class=\"form-group\">\n            <label for=\"password\">Password</label>\n            <input type=\"password\" class=\"form-control\" placeholder=\"Please enter password\" name=\"password\">\n        </div>\n        <button type=\"submit\" class=\"btn btn-primary\">Register</button>\n    </form>\n";
+
+var newUser = function newUser() {
+  $(document).on("submit", "#new-user", /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(e) {
+      var formData, response;
+      return regeneratorRuntime.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              ;
+              e.preventDefault();
+              formData = {
+                username: $("input[name='username']").val(),
+                password: $("input[name='password']").val()
+              };
+              console.log("formData", formData);
+              _context.next = 6;
+              return $.ajax({
+                type: "POST",
+                url: "/api/users/register",
+                contentType: "application/json",
+                data: JSON.stringify(formData)
+              });
+
+            case 6:
+              response = _context.sent;
+              console.log("response", response);
+
+            case 8:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+
+    return function (_x) {
+      return _ref.apply(this, arguments);
+    };
+  }());
+  return form;
+};
+
+var _default = newUser;
 exports.default = _default;
 },{}],"src/app.js":[function(require,module,exports) {
 "use strict";
@@ -1021,11 +1189,17 @@ require("regenerator-runtime/runtime");
 
 var _newProduct = _interopRequireDefault(require("./newProduct.js"));
 
+var _loginUser = _interopRequireDefault(require("./user/loginUser.js"));
+
+var _newUser = _interopRequireDefault(require("./user/newUser.js"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 console.log("Check if this works");
 $("#append-product-form").append((0, _newProduct.default)());
-},{"regenerator-runtime/runtime":"node_modules/regenerator-runtime/runtime.js","./newProduct.js":"src/newProduct.js"}],"../../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+$("#append-login-details").append((0, _loginUser.default)());
+$("#append-register-details").append((0, _newUser.default)());
+},{"regenerator-runtime/runtime":"node_modules/regenerator-runtime/runtime.js","./newProduct.js":"src/newProduct.js","./user/loginUser.js":"src/user/loginUser.js","./user/newUser.js":"src/user/newUser.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -1053,7 +1227,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50702" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55045" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -1229,5 +1403,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/app.js"], null)
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/app.js"], null)
 //# sourceMappingURL=/app.a6a4d504.js.map

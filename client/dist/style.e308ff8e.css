@@ -18,7 +18,7 @@ h1  {
     font-family: 'Lobster', cursive;
     padding-top: 50px;
     color: white;
-    font-size: 130px;
+    font-size: 100px;
 }
 
 h4  {
@@ -31,6 +31,25 @@ h4  {
 .form-control   {
     float: right;
     width: 80%;
+}
+
+#login-user, #new-user {
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-style: solid;
+    text-align: left;
+}
+
+.type-of-login  {
+    font-size: 20px;
+    background-color: lawngreen;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #product-id, #product-code, #product-description, #net-weight, #units-case, #list-price, #unit-barcode, #case-barcode  {

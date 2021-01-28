@@ -50,4 +50,14 @@ router.delete("/delete-product/:id", (request, response) => {
     });
 });
 
+router.get("/findbyid/:id", (request, response) => {
+    VaultApi.findById(request.params.id).then((data) => {
+        console.log(data);
+        response.send(data)
+    })
+    .catch(() => {
+        response.status(404).send("Sorry - there doesn't appear to be a product by that id.  Want to try again?");
+    });
+});
+
 module.exports = router;
