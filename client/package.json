@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/server.js"
+    "start": "parcel src/index.html"
   },
   "repository": {
     "type": "git",
@@ -14,7 +14,7 @@
   "author": "Nicole Barnett",
   "license": "ISC",
   "dependencies": {
-  "regenerator-runtime": "^0.13.7"
+    "regenerator-runtime": "^0.13.7"
   },
   "bugs": {
     "url": "https://github.com/NicoleNZ/GA-project-two/issues"

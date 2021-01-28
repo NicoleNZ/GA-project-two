@@ -126,6 +126,7 @@ const newProduct = () => {
     });
 
     return form;
+    $("append-product-form").empty();
 };
 
 
