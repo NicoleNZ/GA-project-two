@@ -107,7 +107,13 @@ $(document).on("click", "#find-product", async (e) => {
                 $("#list-price").val(data["listPrice"]);
                 $("#unit-barcode").val(data["unitBarcode"]);
                 $("#case-barcode").val(data["caseBarcode"]);
-                $(`input[name="active-product"]:checked`).val(data["activeProduct"])
+                //$(`input[name="active-product"]`).attr("checked", true);
+                if (data["activeProduct"]) {
+                    $("#active-product-yes").prop("checked", true)
+                } else {
+                    $("#active-product-no").prop("checked", true)
+                };
+
             }
         });
         console.log(response);

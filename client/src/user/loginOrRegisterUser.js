@@ -8,7 +8,7 @@ const form = `
         </div>
         <div class="form-group">
             <label for="password">Password</label>
-            <input type="text" id="password" class="form-control" placeholder="Enter your password" name="password">
+            <input type="password" id="password" class="form-control" placeholder="Enter your password" name="password">
         </div>
         <button type="button" class="btn btn-success" id="submit-login">Login</button>
         <button type="button" class="btn btn-warning" id="submit-register">Register</button>

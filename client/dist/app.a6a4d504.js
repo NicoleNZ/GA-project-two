@@ -964,8 +964,15 @@ var newProduct = function newProduct() {
                   $("#units-case").val(data["unitsPerCase"]);
                   $("#list-price").val(data["listPrice"]);
                   $("#unit-barcode").val(data["unitBarcode"]);
-                  $("#case-barcode").val(data["caseBarcode"]);
-                  $("input[name=\"active-product\"]:checked").val(data["activeProduct"]);
+                  $("#case-barcode").val(data["caseBarcode"]); //$(`input[name="active-product"]`).attr("checked", true);
+
+                  if (data["activeProduct"]) {
+                    $("#active-product-yes").prop("checked", true);
+                  } else {
+                    $("#active-product-no").prop("checked", true);
+                  }
+
+                  ;
                 }
               });
 
@@ -1091,7 +1098,7 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-var form = "\n    <form id=\"login-register-user\">\n        <div class=\"form-group\">\n            <label for=\"username\">Username</label>\n            <input type=\"text\" id=\"username\" class=\"form-control\" placeholder=\"Enter your username\" name=\"username\">\n        </div>\n        <div class=\"form-group\">\n            <label for=\"password\">Password</label>\n            <input type=\"text\" id=\"password\" class=\"form-control\" placeholder=\"Enter your password\" name=\"password\">\n        </div>\n        <button type=\"button\" class=\"btn btn-success\" id=\"submit-login\">Login</button>\n        <button type=\"button\" class=\"btn btn-warning\" id=\"submit-register\">Register</button>\n    </form> \n";
+var form = "\n    <form id=\"login-register-user\">\n        <div class=\"form-group\">\n            <label for=\"username\">Username</label>\n            <input type=\"text\" id=\"username\" class=\"form-control\" placeholder=\"Enter your username\" name=\"username\">\n        </div>\n        <div class=\"form-group\">\n            <label for=\"password\">Password</label>\n            <input type=\"password\" id=\"password\" class=\"form-control\" placeholder=\"Enter your password\" name=\"password\">\n        </div>\n        <button type=\"button\" class=\"btn btn-success\" id=\"submit-login\">Login</button>\n        <button type=\"button\" class=\"btn btn-warning\" id=\"submit-register\">Register</button>\n    </form> \n";
 
 var loginOrRegisterUser = function loginOrRegisterUser() {
   $(document).on("click", "#submit-register", /*#__PURE__*/function () {
