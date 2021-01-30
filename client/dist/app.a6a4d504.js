@@ -880,7 +880,7 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-var form = "\n    <div class=\"row\">\n        <div class=\"col\" id=\"side-col\"></div>\n        <div class=\"col-10\" id=\"master-data-form\">\n            <form id=\"product-form\">\n                <div class=\"form-group\">\n                    <label for=\"product-id-label\" id=\"product-id-label\">Product ID</label>\n                    <input type=\"text\" class=\"form-control\" id=\"product-id\" placeholder=\"Enter Product ID\" name=\"product-id\">\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"product-code\" id=\"product-code-label\">Product Code</label>\n                    <input type=\"text\" class=\"form-control\" id=\"product-code\" placeholder=\"E.g. FPC123\" name=\"product-code\">\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"product-description\" id=\"product-description-label\">Product Description</label>\n                    <input type=\"text\" class=\"form-control\" id=\"product-description\" placeholder=\"E.g. Acme Vanilla Bean Flavoured Almonds\" name=\"product-description\">\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"net-weight\" id=\"net-weight-label\">Net Weight</label>\n                    <input type=\"text\" class=\"form-control\" id=\"net-weight\" placeholder=\"E.g. 400g\" name=\"net-weight\">\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"units-case\" id=\"units-case-label\">Units per Case</label>\n                    <input type=\"text\" class=\"form-control\" id=\"units-case\" placeholder=\"E.g. 20\" name=\"units-case\">\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"list-price\" id=\"list-price-label\">List Price</label>\n                    <input type=\"text\" class=\"form-control\" id=\"list-price\" placeholder=\"E.g. $30.00\" name=\"list-price\">\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"unit-barcode\" id=\"unit-barcode-label\">Unit Barcode</label>\n                    <input type=\"text\" class=\"form-control\" id=\"unit-barcode\" placeholder=\"E.g. 942112345678\" name=\"unit-barcode\">\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"case-barcode\" id=\"case-barcode-label\">Case Barcode</label>\n                    <input type=\"text\" class=\"form-control\" id=\"case-barcode\" placeholder=\"E.g. 194212345678\" name=\"case-barcode\">\n                </div>\n                <fieldset class=\"form-group\">\n                    <legend class=\"col-form-label\" id=\"active-product-label\">Active Product?</legend>\n                    <div class=\"form-check form-check-inline\">\n                        <input class=\"form-check-input\" type=\"radio\" id=\"active-product-yes\" name =\"active-product\" value=\"true\">\n                        <label class=\"form-check-label\" for=\"active-product-yes\" id=\"active-product-yes-label\">Yes</label>\n                    </div>\n                    <div class=\"form-check form-check-inline\">\n                        <input class=\"form-check-input\" type=\"radio\" id=\"active-product-no\" name =\"active-product\" value=\"false\">\n                        <label class=\"form-check-label\" for=\"active-product-no\" id=\"active-product-no-label\">No</label>\n                    </div>\n                </fieldset>\n                <button type=\"button\" id=\"create-product\" class=\"btn btn-success\">Create Product</button>\n                <button type=\"button\" id=\"find-product\" class=\"btn btn-primary\">Find Product</button>\n                <button type=\"button\" id=\"update-product\" class=\"btn btn-warning\">Update Product</button>\n                <button type=\"button\" id=\"delete-product\" class=\"btn btn-danger\">Delete Product</button>\n            </form>\n        </div>\n        <div class=\"col\" id=\"side-col\"></div>\n    </div>\n";
+var form = "\n<div class=\"row\">\n    <div class=\"col\" id=\"side-col\"></div>\n    <div class=\"col-10\" id=\"master-data-form\">\n        <form id=\"product-form\">\n            <div class=\"form-group\">\n                <label for=\"product-id-label\" id=\"product-id-label\">Product ID</label>\n                <input type=\"text\" class=\"form-control\" id=\"product-id\" placeholder=\"Enter Product ID\" name=\"product-id\">\n            </div>\n            <div class=\"form-group\">\n                <label for=\"product-code\" id=\"product-code-label\">Product Code</label>\n                <input type=\"text\" class=\"form-control\" id=\"product-code\" placeholder=\"E.g. FPC123\" name=\"product-code\">\n            </div>\n            <div class=\"form-group\">\n                <label for=\"product-description\" id=\"product-description-label\">Product Description</label>\n                <input type=\"text\" class=\"form-control\" id=\"product-description\" placeholder=\"E.g. Acme Vanilla Bean Flavoured Almonds\" name=\"product-description\">\n            </div>\n            <div class=\"form-group\">\n                <label for=\"net-weight\" id=\"net-weight-label\">Net Weight</label>\n                <input type=\"text\" class=\"form-control\" id=\"net-weight\" placeholder=\"E.g. 400g\" name=\"net-weight\">\n            </div>\n            <div class=\"form-group\">\n                <label for=\"units-case\" id=\"units-case-label\">Units per Case</label>\n                <input type=\"text\" class=\"form-control\" id=\"units-case\" placeholder=\"E.g. 20\" name=\"units-case\">\n            </div>\n            <div class=\"form-group\">\n                <label for=\"list-price\" id=\"list-price-label\">List Price</label>\n                <input type=\"text\" class=\"form-control\" id=\"list-price\" placeholder=\"E.g. $30.00\" name=\"list-price\">\n            </div>\n            <div class=\"form-group\">\n                <label for=\"unit-barcode\" id=\"unit-barcode-label\">Unit Barcode</label>\n                <input type=\"text\" class=\"form-control\" id=\"unit-barcode\" placeholder=\"E.g. 942112345678\" name=\"unit-barcode\">\n            </div>\n            <div class=\"form-group\">\n                <label for=\"case-barcode\" id=\"case-barcode-label\">Case Barcode</label>\n                <input type=\"text\" class=\"form-control\" id=\"case-barcode\" placeholder=\"E.g. 194212345678\" name=\"case-barcode\">\n            </div>\n            <fieldset class=\"form-group\">\n                <legend class=\"col-form-label\" id=\"active-product-label\">Active Product?</legend>\n                <div class=\"form-check form-check-inline\">\n                    <input class=\"form-check-input\" type=\"radio\" id=\"active-product-yes\" name =\"active-product\" value=\"true\">\n                    <label class=\"form-check-label\" for=\"active-product-yes\" id=\"active-product-yes-label\">Yes</label>\n                </div>\n                <div class=\"form-check form-check-inline\">\n                    <input class=\"form-check-input\" type=\"radio\" id=\"active-product-no\" name =\"active-product\" value=\"false\">\n                    <label class=\"form-check-label\" for=\"active-product-no\" id=\"active-product-no-label\">No</label>\n                </div>\n            </fieldset>\n            <button type=\"button\" id=\"create-product\" class=\"btn btn-success\">Create Product</button>\n            <button type=\"button\" id=\"find-product\" class=\"btn btn-primary\">Find Product</button>\n            <button type=\"button\" id=\"update-product\" class=\"btn btn-warning\">Update Product</button>\n            <button type=\"button\" id=\"delete-product\" class=\"btn btn-danger\">Delete Product</button>\n        </form>\n    </div>\n    <div class=\"col\" id=\"side-col\"></div>\n</div>\n";
 
 var newProduct = function newProduct() {
   $(document).on("click", "#create-product", /*#__PURE__*/function () {
@@ -1080,107 +1080,82 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-var form = "\n    <form id=\"login-register-user\">\n        <div class=\"form-group\">\n            <label for=\"username\">Username</label>\n            <input type=\"text\" id=\"username\" class=\"form-control\" placeholder=\"Enter your username\" name=\"username\">\n        </div>\n        <div class=\"form-group\">\n            <label for=\"password\">Password</label>\n            <input type=\"text\" id=\"password\" class=\"form-control\" placeholder=\"Enter your password\" name=\"password\">\n        </div>\n        <button type=\"submit\" class=\"btn btn-success\" id=\"submit-login\">Login</button>\n        <button type=\"submit\" class=\"btn btn-warning\" id=\"submit-register\">Register</button>\n    </form> \n";
-/*
-const loginUser = () => {
-    $(document).on("submit", "#login-user", async (e) => {
-        e.preventDefault();
-
-        const formData = {
-            username: $("input[name='username']").val(),
-            password: $("input[name='password']").val(),
-        };
-        
-        const response = await $.ajax({
-            type: "POST",
-            url: "/api/user/login",
-            contentType: "application/json",
-            data: JSON.stringify(formData),
-        });
-        console.log("response: ", response);
-    });
-    return form;
-};
-*/
+var form = "\n    <form id=\"login-register-user\">\n        <div class=\"form-group\">\n            <label for=\"username\">Username</label>\n            <input type=\"text\" id=\"username\" class=\"form-control\" placeholder=\"Enter your username\" name=\"username\">\n        </div>\n        <div class=\"form-group\">\n            <label for=\"password\">Password</label>\n            <input type=\"text\" id=\"password\" class=\"form-control\" placeholder=\"Enter your password\" name=\"password\">\n        </div>\n        <button type=\"button\" class=\"btn btn-success\" id=\"submit-login\">Login</button>\n        <button type=\"button\" class=\"btn btn-warning\" id=\"submit-register\">Register</button>\n    </form> \n";
 
 var loginOrRegisterUser = function loginOrRegisterUser() {
-  $(document).ready(function () {
-    var _this = this;
+  $(document).on("click", "#submit-login", /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(e) {
+      var formData, response;
+      return regeneratorRuntime.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              e.preventDefault();
+              formData = {
+                username: $("input[name='username']").val(),
+                password: $("input[name='password']").val()
+              };
+              _context.next = 4;
+              return $.ajax({
+                type: "POST",
+                url: "/api/user/login",
+                contentType: "application/json",
+                data: JSON.stringify(formData)
+              });
 
-    $("#login-register-login button").click( /*#__PURE__*/function () {
-      var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(e) {
-        var formData, response, _formData, _response;
+            case 4:
+              response = _context.sent;
+              console.log("response: ", response);
 
-        return regeneratorRuntime.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                e.preventDefault();
-
-                if (!($(_this).attr("id") == "submit-login")) {
-                  _context.next = 8;
-                  break;
-                }
-
-                $("#login-register-user").submit();
-                formData = {
-                  username: $("input[name='username']").val(),
-                  password: $("input[name='password']").val()
-                };
-                _context.next = 6;
-                return $.ajax({
-                  type: "POST",
-                  url: "/api/user/login",
-                  contentType: "application/json",
-                  data: JSON.stringify(formData)
-                });
-
-              case 6:
-                response = _context.sent;
-                console.log("response: ", response);
-
-              case 8:
-                ;
-
-                if (!($(_this).attr("id") == "submit-register")) {
-                  _context.next = 17;
-                  break;
-                }
-
-                $("#login-register-user").submit();
-                _formData = {
-                  username: $("input[name='username']").val(),
-                  password: $("input[name='password']").val()
-                };
-                console.log("formData", _formData);
-                _context.next = 15;
-                return $.ajax({
-                  type: "POST",
-                  url: "/api/users/register",
-                  contentType: "application/json",
-                  data: JSON.stringify(_formData)
-                });
-
-              case 15:
-                _response = _context.sent;
-                console.log("response: ", _response);
-
-              case 17:
-                ;
-
-              case 18:
-              case "end":
-                return _context.stop();
-            }
+            case 6:
+            case "end":
+              return _context.stop();
           }
-        }, _callee);
-      }));
+        }
+      }, _callee);
+    }));
 
-      return function (_x) {
-        return _ref.apply(this, arguments);
-      };
-    }());
-  });
+    return function (_x) {
+      return _ref.apply(this, arguments);
+    };
+  }());
+  $(document).on("click", "#submit-register", /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(e) {
+      var formData, response;
+      return regeneratorRuntime.wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              e.preventDefault();
+              formData = {
+                username: $("input[name='username']").val(),
+                password: $("input[name='password']").val()
+              };
+              console.log("formData", formData);
+              _context2.next = 5;
+              return $.ajax({
+                type: "POST",
+                url: "/api/users/register",
+                contentType: "application/json",
+                data: JSON.stringify(formData)
+              });
+
+            case 5:
+              response = _context2.sent;
+              console.log("response: ", response);
+
+            case 7:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2);
+    }));
+
+    return function (_x2) {
+      return _ref2.apply(this, arguments);
+    };
+  }());
   return form;
 };
 
@@ -1191,16 +1166,16 @@ exports.default = _default;
 
 require("regenerator-runtime/runtime");
 
-var _newProduct = _interopRequireDefault(require("./newProduct.js"));
+var _newProduct = _interopRequireDefault(require("./newProduct"));
 
-var _loginOrRegisterUser = _interopRequireDefault(require("./user/loginOrRegisterUser.js"));
+var _loginOrRegisterUser = _interopRequireDefault(require("./user/loginOrRegisterUser"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 console.log("Check if this works");
 $("#append-product-form").append((0, _newProduct.default)());
 $("#append-login-register").append((0, _loginOrRegisterUser.default)());
-},{"regenerator-runtime/runtime":"node_modules/regenerator-runtime/runtime.js","./newProduct.js":"src/newProduct.js","./user/loginOrRegisterUser.js":"src/user/loginOrRegisterUser.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"regenerator-runtime/runtime":"node_modules/regenerator-runtime/runtime.js","./newProduct":"src/newProduct.js","./user/loginOrRegisterUser":"src/user/loginOrRegisterUser.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -1228,7 +1203,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50145" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57180" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

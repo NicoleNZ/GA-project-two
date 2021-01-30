@@ -1,29 +1,19 @@
 {
-  "name": "ga-project-two",
+  "name": "newapi",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index.js"
+    "start": "npx nodemon src/index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/NicoleNZ/GA-project-two.git"
-  },
-  "author": "Nicole Barnett",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/NicoleNZ/GA-project-two/issues"
-  },
-  "homepage": "https://github.com/NicoleNZ/GA-project-two#readme",
   "dependencies": {
     "bcrypt": "^5.0.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
-    "http-proxy-middleware": "^1.0.6",
-    "mongoose": "^5.11.13",
-    "parcel-bundler": "^1.12.4"
+    "mongoose": "^5.11.11"
   }
 }
