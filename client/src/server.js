@@ -1,7 +1,6 @@
 const { createProxyMiddleware } = require("http-proxy-middleware");
 const Bundler = require("parcel-bundler");
 const express = require("express");
-const cors = require("cors");
 
 const bundler = new Bundler("../index.html");
 const app = express();

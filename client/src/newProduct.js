@@ -3,7 +3,6 @@ const form = `
     <div class="row">
         <div class="col" id="side-col"></div>
         <div class="col-10" id="master-data-form">
-            <h4>Create and Manage Your Products</h4>
             <form id="product-form">
                 <div class="form-group">
                     <label for="product-id-label" id="product-id-label">Product ID</label>
@@ -48,9 +47,9 @@ const form = `
                         <label class="form-check-label" for="active-product-no" id="active-product-no-label">No</label>
                     </div>
                 </fieldset>
-                <button type="button" id="create-product" class="btn btn-light">Create Product</button>
-                <button type="button" id="find-product" class="btn btn-light">Find Product</button>
-                <button type="button" id="update-product" class="btn btn-light">Update Product</button>
+                <button type="button" id="create-product" class="btn btn-success">Create Product</button>
+                <button type="button" id="find-product" class="btn btn-primary">Find Product</button>
+                <button type="button" id="update-product" class="btn btn-warning">Update Product</button>
                 <button type="button" id="delete-product" class="btn btn-danger">Delete Product</button>
             </form>
         </div>

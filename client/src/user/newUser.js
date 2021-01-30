@@ -13,7 +13,7 @@ const form = `
 `;
 
 const newUser = () => {
-    $(document).on("submit", "#new-user", async (e) => {;
+    $(document).on("submit", "#new-user", async (e) => {
         e.preventDefault();
 
         const formData = {
