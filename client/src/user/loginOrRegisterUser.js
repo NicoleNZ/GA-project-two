@@ -1,3 +1,5 @@
+import newProduct from "../newProduct";
+
 const form = `
     <form id="login-register-user">
         <div class="form-group">
@@ -14,22 +16,6 @@ const form = `
 `;
 
 const loginOrRegisterUser = () => {
-    $(document).on("click", "#submit-login", async (e) => {
-        e.preventDefault();
-
-        const formData = {
-            username: $("input[name='username']").val(),
-            password: $("input[name='password']").val(),
-        };
-        
-        const response = await $.ajax({
-            type: "POST",
-            url: "/api/user/login",
-            contentType: "application/json",
-            data: JSON.stringify(formData),
-        });
-        console.log("response: ", response);
-    });
 
     $(document).on("click", "#submit-register", async (e) => {
         e.preventDefault();
@@ -42,11 +28,36 @@ const loginOrRegisterUser = () => {
 
         const response = await $.ajax({
             type: "POST",
-            url: "/api/users/register",
+            url: "/api/user/register",
             contentType: "application/json",
             data: JSON.stringify(formData),
         });
         console.log("response: ", response);
+        alert("Thanks for registering!  Click 'login' to proceed to your vault");
+    });
+
+    $(document).on("click", "#submit-login", async (e) => {
+        e.preventDefault();
+
+        const formData = {
+            username: $("input[name='username']").val(),
+            password: $("input[name='password']").val(),
+        };
+        
+        try {
+        const response = await $.ajax({
+            type: "POST",
+            url: "/api/user/login",
+            contentType: "application/json",
+            data: JSON.stringify(formData),
+        });
+        console.log("response: ", response);
+        $("#append-login-register").empty();
+        $("#append-product-form").append(newProduct());
+        
+        } catch (err) { 
+        alert("Invalid credentials - register as a new user or try again");
+        }
     });
     return form;
 };

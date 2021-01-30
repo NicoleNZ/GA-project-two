@@ -87,18 +87,20 @@ $(document).on("click", "#create-product", async (e) => {
         data: JSON.stringify(requestBody),
     });
     console.log(response);
+    alert("New product created");
 });
 
 $(document).on("click", "#find-product", async (e) => {
     e.preventDefault();
-    const searchProductCode = $("#product-code").val();
-    if(searchProductCode)   {
+    const searchProductId = $("#product-id").val();
+    if(searchProductId)   {
         const response = await $.ajax({
-            type: "POST",
+            type: "GET",
             url: `/api/vault/findbyid/${$("#product-id").val()}`,
             contentType: "application/json",
-            data: { productCode: searchProductCode },
+            data: { productCode: searchProductId },
             success: function(data) {
+                $("#product-code").val(data["productCode"]);
                 $("#product-description").val(data["productName"]);
                 $("#net-weight").val(data["netWeight"]);
                 $("#units-case").val(data["unitsPerCase"]);
@@ -112,6 +114,7 @@ $(document).on("click", "#find-product", async (e) => {
     } else {
         alert("No such ID found!");
     }
+    console.log($("#product-id").val());
     });
 
 $(document).on("click", "#update-product", async (e) => {
@@ -136,6 +139,7 @@ $(document).on("click", "#update-product", async (e) => {
         data: JSON.stringify(requestBody),
     });
     console.log(response);
+    alert("Product updated");
 });
 
 $(document).on("click", "#delete-product", async (e) => {
@@ -148,6 +152,7 @@ $(document).on("click", "#delete-product", async (e) => {
         contentType: "application/json",
     });
     console.log(response);
+    alert("Product deleted");
 });
 
 return form;

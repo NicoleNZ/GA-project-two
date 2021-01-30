@@ -20,6 +20,11 @@
     padding: 5px;
 }
 
+.footer h4  {
+    font-size: 20px;
+    padding-top: 10px;
+}
+
 p, a, h3, h4    {
     font-family: 'Lato', sans-serif;
 }
@@ -85,8 +90,7 @@ p, a, h3, h4    {
 
 @media screen and (max-width: 400px) {
     .navbar a {
-        float: none;
-        width: 100%;
+        flex-direction: column;
     }
 }
 
@@ -95,8 +99,14 @@ p, a, h3, h4    {
 }
 
 .footer {
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-align: center; 
     color: gold;
     background-color: black;
-}
+    }
+    
+    @media (max-height:800px){
+        footer { position: static; 
+        }
+    }

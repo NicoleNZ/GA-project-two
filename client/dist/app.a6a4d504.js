@@ -920,8 +920,9 @@ var newProduct = function newProduct() {
             case 12:
               response = _context.sent;
               console.log(response);
+              alert("New product created");
 
-            case 14:
+            case 15:
             case "end":
               return _context.stop();
           }
@@ -935,28 +936,29 @@ var newProduct = function newProduct() {
   }());
   $(document).on("click", "#find-product", /*#__PURE__*/function () {
     var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(e) {
-      var searchProductCode, response;
+      var searchProductId, response;
       return regeneratorRuntime.wrap(function _callee2$(_context2) {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
               e.preventDefault();
-              searchProductCode = $("#product-code").val();
+              searchProductId = $("#product-id").val();
 
-              if (!searchProductCode) {
+              if (!searchProductId) {
                 _context2.next = 9;
                 break;
               }
 
               _context2.next = 5;
               return $.ajax({
-                type: "POST",
+                type: "GET",
                 url: "/api/vault/findbyid/".concat($("#product-id").val()),
                 contentType: "application/json",
                 data: {
-                  productCode: searchProductCode
+                  productCode: searchProductId
                 },
                 success: function success(data) {
+                  $("#product-code").val(data["productCode"]);
                   $("#product-description").val(data["productName"]);
                   $("#net-weight").val(data["netWeight"]);
                   $("#units-case").val(data["unitsPerCase"]);
@@ -977,6 +979,9 @@ var newProduct = function newProduct() {
               alert("No such ID found!");
 
             case 10:
+              console.log($("#product-id").val());
+
+            case 11:
             case "end":
               return _context2.stop();
           }
@@ -1018,8 +1023,9 @@ var newProduct = function newProduct() {
             case 5:
               response = _context3.sent;
               console.log(response);
+              alert("Product updated");
 
-            case 7:
+            case 8:
             case "end":
               return _context3.stop();
           }
@@ -1050,8 +1056,9 @@ var newProduct = function newProduct() {
             case 4:
               response = _context4.sent;
               console.log(response);
+              alert("Product deleted");
 
-            case 6:
+            case 7:
             case "end":
               return _context4.stop();
           }
@@ -1076,6 +1083,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
+var _newProduct = _interopRequireDefault(require("../newProduct"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
@@ -1083,7 +1094,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 var form = "\n    <form id=\"login-register-user\">\n        <div class=\"form-group\">\n            <label for=\"username\">Username</label>\n            <input type=\"text\" id=\"username\" class=\"form-control\" placeholder=\"Enter your username\" name=\"username\">\n        </div>\n        <div class=\"form-group\">\n            <label for=\"password\">Password</label>\n            <input type=\"text\" id=\"password\" class=\"form-control\" placeholder=\"Enter your password\" name=\"password\">\n        </div>\n        <button type=\"button\" class=\"btn btn-success\" id=\"submit-login\">Login</button>\n        <button type=\"button\" class=\"btn btn-warning\" id=\"submit-register\">Register</button>\n    </form> \n";
 
 var loginOrRegisterUser = function loginOrRegisterUser() {
-  $(document).on("click", "#submit-login", /*#__PURE__*/function () {
+  $(document).on("click", "#submit-register", /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(e) {
       var formData, response;
       return regeneratorRuntime.wrap(function _callee$(_context) {
@@ -1095,19 +1106,21 @@ var loginOrRegisterUser = function loginOrRegisterUser() {
                 username: $("input[name='username']").val(),
                 password: $("input[name='password']").val()
               };
-              _context.next = 4;
+              console.log("formData", formData);
+              _context.next = 5;
               return $.ajax({
                 type: "POST",
-                url: "/api/user/login",
+                url: "/api/user/register",
                 contentType: "application/json",
                 data: JSON.stringify(formData)
               });
 
-            case 4:
+            case 5:
               response = _context.sent;
               console.log("response: ", response);
+              alert("Thanks for registering!  Click 'login' to proceed to your vault");
 
-            case 6:
+            case 8:
             case "end":
               return _context.stop();
           }
@@ -1119,7 +1132,7 @@ var loginOrRegisterUser = function loginOrRegisterUser() {
       return _ref.apply(this, arguments);
     };
   }());
-  $(document).on("click", "#submit-register", /*#__PURE__*/function () {
+  $(document).on("click", "#submit-login", /*#__PURE__*/function () {
     var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(e) {
       var formData, response;
       return regeneratorRuntime.wrap(function _callee2$(_context2) {
@@ -1131,11 +1144,11 @@ var loginOrRegisterUser = function loginOrRegisterUser() {
                 username: $("input[name='username']").val(),
                 password: $("input[name='password']").val()
               };
-              console.log("formData", formData);
+              _context2.prev = 2;
               _context2.next = 5;
               return $.ajax({
                 type: "POST",
-                url: "/api/users/register",
+                url: "/api/user/login",
                 contentType: "application/json",
                 data: JSON.stringify(formData)
               });
@@ -1143,13 +1156,22 @@ var loginOrRegisterUser = function loginOrRegisterUser() {
             case 5:
               response = _context2.sent;
               console.log("response: ", response);
+              $("#append-login-register").empty();
+              $("#append-product-form").append((0, _newProduct.default)());
+              _context2.next = 14;
+              break;
 
-            case 7:
+            case 11:
+              _context2.prev = 11;
+              _context2.t0 = _context2["catch"](2);
+              alert("Invalid credentials - register as a new user or try again");
+
+            case 14:
             case "end":
               return _context2.stop();
           }
         }
-      }, _callee2);
+      }, _callee2, null, [[2, 11]]);
     }));
 
     return function (_x2) {
@@ -1161,21 +1183,17 @@ var loginOrRegisterUser = function loginOrRegisterUser() {
 
 var _default = loginOrRegisterUser;
 exports.default = _default;
-},{}],"src/app.js":[function(require,module,exports) {
+},{"../newProduct":"src/newProduct.js"}],"src/app.js":[function(require,module,exports) {
 "use strict";
 
 require("regenerator-runtime/runtime");
-
-var _newProduct = _interopRequireDefault(require("./newProduct"));
 
 var _loginOrRegisterUser = _interopRequireDefault(require("./user/loginOrRegisterUser"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-console.log("Check if this works");
-$("#append-product-form").append((0, _newProduct.default)());
 $("#append-login-register").append((0, _loginOrRegisterUser.default)());
-},{"regenerator-runtime/runtime":"node_modules/regenerator-runtime/runtime.js","./newProduct":"src/newProduct.js","./user/loginOrRegisterUser":"src/user/loginOrRegisterUser.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"regenerator-runtime/runtime":"node_modules/regenerator-runtime/runtime.js","./user/loginOrRegisterUser":"src/user/loginOrRegisterUser.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

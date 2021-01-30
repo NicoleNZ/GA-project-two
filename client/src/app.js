@@ -1,9 +1,6 @@
 import "regenerator-runtime/runtime";
-import newProduct from "./newProduct";
-console.log("Check if this works");
-import loginOrRegisterUser from "./user/loginOrRegisterUser";
 
-$("#append-product-form").append(newProduct());
+import loginOrRegisterUser from "./user/loginOrRegisterUser";
 
 $("#append-login-register").append(loginOrRegisterUser());
 
